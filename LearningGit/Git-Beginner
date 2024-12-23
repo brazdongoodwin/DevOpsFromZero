@@ -1,0 +1,195 @@
+Git For Beginners: Basic Usage Workflow
+
+Prerequisites: 
+	Be on a Linux machine or a machine capable of cloning a GitHub repo
+	Familiarity with basic Linux commands (ex. cd, ls, mkdir)
+	Familiarity with the Vim text editor
+
+Target Audience: 
+	Beginners
+
+Objective:
+	Learn how to use Git to clone a repository, create a new branch, edit a text file, commit changes, and push those changes to the remote repository using Git commands.
+
+Real Example:
+	Imagine you’re working on a project in a file called example.txt. 
+	
+	You need to do the following:
+	
+	1.) Clone an existing repository.
+	2.) Create a new branch for your changes.
+	3.) Edit the example.txt file.
+	4.) Add the file.
+	5.) Commit the changes with a summary message of what was changed.
+	6.) Push the changes to the remote repository.
+	7.) Merge to the target branch (usually 'Master' or 'Main' branch) Steps will not be included for this as it varies depending on which code hosting platform you're working with Git from. 
+
+
+
+
+Recommendation:
+        Please do not copy and paste these commands.
+        It is meant to be illustrative of how these commands work. 
+        Please create your own test repo and attempt this process there if you want a live and more immersive experience.
+
+
+----- Step-by-Step Example Guide -----
+
+1. Cloning the Repository
+	To get started, you need to clone an existing Git repository. This will download the project files to your local machine.
+
+	Command:
+	git clone https://github.com/exampleuser/examplerepo.git
+	
+	After running this command, you’ll have a folder called 'examplerepo' with all the project files.
+
+2. Navigate to the Repository Folder
+	Now, navigate into the folder where the repository was cloned:
+
+	Command:
+	cd examplerepo
+	
+	You've now put yourself inside of the local repository directory.
+
+3. Check the Status of the Repository
+	Before making any changes, you can use the git status command to see the current state of the repository. This will show you if there are any untracked or modified files.
+
+	Command:
+	git status
+
+	Output might look something like this:
+	On branch master
+	nothing to commit, working tree clean
+
+	This means there are no uncommitted changes, and everything is up to date.
+
+4. Create a New Branch
+	To avoid making changes directly to the main branch, create a new branch to isolate your changes. This keeps things organized and safe.
+
+	Command:
+	git checkout -b test-branch
+
+	This creates a new branch called 'test-branch' and immediately switches you to that branch.
+
+5. Edit the example.txt File
+	Now, let’s say you want to add a new entry in the example.txt file. Open the file in a text editor (like vim).
+
+	Command:
+	vim example.txt
+
+	Let’s say you add the following line at the end of the file:
+	"Example changes in the example file." (without the quotes)
+	Write the file and quit the editor. (press the colon button ':' then type the 'w' key, the 'q' key and then press ENTER on your keyboard)
+
+6. Check the Status Again
+
+	After editing the file, run git status to see what’s changed.
+
+	Command:
+	git status
+
+	Example Output:
+	On branch test-branch
+	Changes not staged for commit:
+  	(use "git add <file>..." to update what will be committed)
+  	(use "git restore <file>..." to discard changes in working directory)
+        modified:   example.txt
+
+	This output tells you that example.txt has been modified but not yet staged for commit.
+
+7. Stage the Changes
+	Before committing, you need to stage the file. This tells Git that you want to include the changes to example.txt in your next commit.
+
+	Command:
+	git add example.txt
+
+8. Commit the Changes
+
+	Now that the changes are staged, commit them with a descriptive message. A commit message should be like a snapshot idea of your changes in text form for others to quickly know what you changed.
+
+	Command:
+	git commit -m "Made changes to example.txt"
+
+	This command commits the changes and includes the message “Made changes to example.txt,” which helps explain what the commit is about.
+
+9. Check the Status Again
+
+	After committing, check the status one more time to confirm that everything is committed.
+
+	Command:
+	git status
+
+	Example Output:
+	On branch test-branch
+	nothing to commit, working tree clean
+
+	Now, everything is committed and clean.
+
+10. Push the Changes to the Remote Repository
+
+	Now that you’ve committed your changes locally, it’s time to push them to the remote repository so that others can see your changes (or for backup).
+
+	Command:
+	git push origin test-branch
+
+	This pushes the test-branch branch to the remote repository (GitHub, GitLab, etc.).
+
+11. Verify the Changes on GitHub
+
+	Next visit your repository on GitHub (or the Git service you're using) to verify that your new branch (test-branch) and the updated example.txt are now available remotely.
+
+
+
+
+
+Git Commands Summary:
+
+
+Cloning a repository:
+
+	git clone <repository-url>
+
+Check the status of the repository:
+
+	git status
+
+Create a new branch and switch to it:
+
+	git checkout -b <branch-name>
+
+Stage changes:
+
+	git add <file-name>
+
+Commit changes:
+
+	git commit -m "Commit message"
+
+Push changes to the remote repository:
+
+	git push origin <branch-name>
+
+
+
+
+Important Concepts:
+
+
+	Ceating Files Locally: 
+When you create or modify a file (like example.txt), Git expects you to track and stage these changes for future commits.
+	
+	Git status: 
+This command is essential for understanding the current state of your repository. It tells you which files are modified, staged, or untracked.
+	
+	Staging and Committing: 
+Staging files (git add) prepares them to be committed, and git commit captures a snapshot of the changes you've made. You can only commit changes that have been staged.
+	
+	Pushing to Remote: 
+After committing, git push uploads your changes to the remote repository, where others can access them.
+
+
+
+
+Real-World Application:
+
+This workflow (cloning, creating branches, making changes, and pushing to remote) is crucial for collaboration amongst all teams in the software development cycle who contribute code. Developers typically work on their own branches, making changes without affecting the main codebase to fix bugs or develop changes. Once their changes are ready, they push their branches to the remote repository and create a pull request (PR) for review and merging if approved. DevOps Engineers also do this in teams to ensure mistakes are less likely to be made in their code changes.
