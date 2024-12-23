@@ -1,11 +1,11 @@
 ## DevOpsFromZero ##
 
-Documenting the journey from newbie to pro.
+Documentation for the journey from DevOps Junior to Lead DevOps Engineer.
 
 
 --- Project Overview ---
 
-This is a personal passion project designed to be a comprehensive guide for beginners to advanced learners, helping them make rapid progress in Linux and DevOps. If you're looking to build a solid foundation in Linux, DevOps, and related technologies, this repository might be for you. Whether you're starting out or deepening your expertise, this guide offers structure, exercises, and real-world projects to help you move forward with confidence. I created this repository as part of my own journey into Linux and DevOps. While I’m still learning, I wanted to share the resources, techniques, and experiences that helped me navigate these complex subjects. This project reflects everything that helped me gain confidence in solving real-world problems, and I hope it does the same for you.
+This is a personal passion project designed to be a comprehensive guide for beginners to advanced learners, helping them make rapid progress in Linux and DevOps tools. If you're looking to build a solid foundation in Linux, DevOps, and related technologies/practices, this repository might be for you. Whether you're starting out or deepening your expertise, this guide offers structure, exercises, and real-world projects to help you move forward with more confidence. I created this repository as part of my own journey into Linux and DevOps and while I’m still learning, I wanted to share the resources, techniques, and experiences that helped me navigate these complex subjects. This project reflects everything that helped me gain confidence in solving real-world problems, and I hope it does the same for you.
 
 
 --- How This Repository Helps You ---
@@ -49,11 +49,13 @@ The repository is divided into sections that can be followed individually or as 
 
 
 --- How To Get Started ---
+
     Choose Your Path: Select a learning path based on your current skill level, or pick an individual topic.
     Complete the Exercises: Work through the exercises and mini-projects for each topic to reinforce your understanding and build practical skills.
     Stay Consistent: The key to success is dedication. Follow your roadmap, complete the projects, and you’ll learn quickly.
 
 --- Contributing ---
+
 Contributions are welcome! However, to ensure consistency and alignment with the project's goal, contributions will be reviewed. To contribute, fork the repo and submit a pull request. Contributions should adhere to the following principles:
 
     Clear and concise: Make concepts as accessible as possible.
@@ -62,8 +64,10 @@ Contributions are welcome! However, to ensure consistency and alignment with the
 
 
 --- Why You Should Contribute ---
+
 Your contributions will help others achieve their goals faster. By making the learning experience more structured and accessible, you’ll empower others to begin their DevOps careers.
 
 
 !!! --- Disclaimer --- !!!
+
 This repository is a learning resource and not a substitute for formal certifications or professional training. While it provides practical, real-world applicable material, it’s important to continue learning through other resources and gain real-world experience.
