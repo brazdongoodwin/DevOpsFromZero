@@ -5,7 +5,7 @@ Documentation for the journey from DevOps Junior to Lead DevOps Engineer.
 
 --- Project Overview ---
 
-This is a personal passion project designed to be a comprehensive guide for beginners to advanced learners, helping them make rapid progress in Linux and DevOps tools. If you're looking to build a solid foundation in Linux, DevOps, and related technologies/practices, this repository might be for you. Whether you're starting out or deepening your expertise, this guide offers structure, exercises, and real-world projects to help you move forward with more confidence. I created this repository as part of my own journey into Linux and DevOps and while I’m still learning, I wanted to share the resources, techniques, and experiences that helped me navigate these complex subjects. This project reflects everything that helped me gain confidence in solving real-world problems, and I hope it does the same for you.
+This is a personal passion project designed to be a comprehensive guide for beginners to advanced learners, helping them make rapid progress in Linux and DevOps tools. If you're looking to build a solid foundation in Linux, DevOps, and related technologies/practices, this repository might be for you. Whether you're starting out or deepening your expertise, this set of guides offers structure, exercises, and real-world projects to help you move forward with more confidence. I created this repository as part of my own journey into Linux and DevOps and while I’m still learning, I wanted to share the method I used and experiences that helped me navigate these complex subjects. This project reflects everything that helped me gain confidence in solving real-world problems, and I hope it does the same for you.
 
 
 --- How This Repository Helps You ---
