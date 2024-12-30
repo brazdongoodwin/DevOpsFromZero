@@ -1,0 +1,155 @@
+Bash For Beginners: Basic Cheat Sheet Lesson Plan Hybrid
+
+Prerequisites:
+        Be on a Linux machine 
+	Have a desire to learn Bash
+
+Target Audience:
+        Beginners
+
+Objective:
+	Empower users to get started and begin exploring and practicing foundational Bash commands directly in the terminal.
+
+
+1. Introduction: Start with the Terminal
+	
+	Opening the Terminal:
+
+    	Linux: Use Ctrl + Alt + T or search for "Terminal."
+
+	Basic Structure of a Command:
+	command [options] [arguments]
+
+    	Example: ls -l /home
+
+2. Navigation Commands
+	
+	Try These:
+	pwd                   # Print the current working directory
+	ls                    # List files in the directory
+	ls -l                 # Detailed file list (permissions, size, etc.)
+	cd [directory]        # Change directory
+	cd ..                 # Go up one level
+	cd ../../             # Go up two levels
+	cd ~                  # Go to your home directory
+
+	Challenge:
+    	Navigate to your home directory and list all hidden files using ls -a.
+
+3. File Management
+
+	Try These:
+	touch file.txt        # Create an empty file
+	mkdir folder_name     # Create a directory
+	cp file.txt folder/   # Copy file to a directory
+	mv file.txt newname   # Rename or move a file
+	rm file.txt           # Delete a file
+	rm -r folder/         # Delete a directory and its contents
+	
+	Challenge:
+    	Create a new folder, add a file to it, and then delete both.
+
+4. Viewing Files
+	
+	Try These:
+	cat file.txt          # View the entire file
+	head file.txt         # View the first 10 lines of a file
+	tail file.txt         # View the last 10 lines of a file
+	less file.txt         # Scroll through a file (use 'q' to quit)
+	
+	Challenge:
+    	Create a file with echo "Hello, World!" > file.txt and view its contents.
+
+5. Permissions
+
+	Try These:
+	ls -l                 # View file permissions
+	chmod +x file.sh      # Make a file executable
+	chmod 644 file.txt    # Set read/write permissions
+	
+	Challenge:
+    	Create a file and make it executable.
+
+6. Process Management
+
+	Try These:
+	ps                    # View running processes
+	ps aux | grep bash    # Find all Bash processes
+	kill [PID]            # Kill a process by its PID
+	
+	Challenge:
+    	Use sleep 30 & to create a background process, then kill it.
+
+7. Text Processing
+	
+	Try These:
+	echo "hello world" | grep hello   # Search text
+	echo "apple\nbanana" | sort       # Sort lines
+	cat file.txt | wc -l              # Count lines in a file
+
+	Challenge:
+    	Create a list of fruits and sort them alphabetically.
+
+8. Redirection and Pipes
+
+	Try These:
+	command > output.txt         # Redirect output to a file
+	command >> output.txt        # Append output to a file
+	command1 | command2          # Pipe output to another command
+	echo "error" 2> errors.log   # Redirect errors to a file
+	
+	Challenge: 
+	Use ls -l | grep "txt" > text_files.txt to find all .txt files and save the output.
+	Create a test file using touch example.txt if you don’t already have any .txt files	
+
+9. Environment Variables
+	
+	Try These:
+	echo $HOME                  # Display the value of an environment variable
+	export VAR=value            # Create a new variable
+	printenv                    # List all environment variables
+	
+	Challenge:
+    	Create and display a new environment variable.
+
+10. Scripting Basics
+
+	Scripting can be intimidating for beginners but don't worry. Let's break it down step-by-step, like this:
+
+        First, we'll create a file using the command: 
+	touch script.sh.
+        
+	Open the file in a text editor like vim using the command: 
+	vim script.sh
+
+	Add the lines:
+	#!/bin/bash  
+	echo "Hello, $USER!"  
+	date 
+
+	Then write and quit the file using the command: 
+	:wq! 
+	From within the vim environment.
+
+	Run it: 
+	chmod +x script.sh 
+
+	Challenge:
+	Write a script that prints your current directory and lists its contents.
+
+
+11. Cheat Sheet Summary
+
+	Command	Descriptions
+	pwd	Print current directory
+	ls	List files
+	cd	Change directory
+	mkdir	Create a directory
+	touch	Create an empty file
+	cat	View a file
+	grep	Search text
+	chmod	Change permissions
+	ps	List processes
+	kill	Kill a process
+	echo	Print text
+	> / >>	Redirect output
