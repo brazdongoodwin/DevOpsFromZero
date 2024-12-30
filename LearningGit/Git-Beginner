@@ -196,3 +196,6 @@ This workflow (cloning, creating branches, making changes, and pushing to remote
 Developers typically work on their own branches, making changes without affecting the main codebase to fix bugs or develop changes. 
 Once their changes are ready, they push their branches to the remote repository and create a pull request (PR) for review and merging if approved. 
 DevOps Engineers also do this in teams to ensure mistakes are less likely to be made in their code changes.
+
+Git Command Cheat Sheet: 
+	https://education.github.com/git-cheat-sheet-education.pdf
