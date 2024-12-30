@@ -1,0 +1,91 @@
+Challenge: Count Word Frequency in a File 
+
+Objective:
+Write a script that:
+
+    Takes a file as an input.
+    Counts how many times each word appears in the file.
+    Sorts the results by frequency, showing the most common words first.
+
+Learning Outcomes:
+
+    Reading files:
+	Using basic commands like cat to display the file content.
+    
+    Counting occurrences:
+	Using sort and uniq to count how often each word appears.
+    
+    Sorting results:
+	Sorting the words to show the most frequent ones at the top.
+
+Steps:
+
+	Read the File:
+          
+	  Use the cat command to read and display the content of a file. This helps us see what's inside the file.
+
+	  cat filename.txt
+
+	  Convert Spaces to Newlines:
+
+    	  We want to split the file content into words. By replacing spaces with newlines, each word will be on its own line. Use the tr command for this.
+
+	  cat filename.txt | tr ' ' '\n'
+
+	Count Word Occurrences:
+
+	  Now we want to count how many times each word appears. First, we need to sort the words, and then use uniq to count them.
+
+	  cat filename.txt | tr ' ' '\n' | sort | uniq -c
+
+	Sort Words by Frequency:
+
+	  To see the most common words first, we can sort the results by the number of occurrences in descending order.
+
+	  cat filename.txt | tr ' ' '\n' | sort | uniq -c | sort -nr
+
+	
+	Simple Script:
+
+	  Here’s a simple script that performs all the steps above:
+
+	  #!/bin/bash
+
+	  # Check if a file is provided
+	  if [ -z "$1" ]; then
+	    echo "Please provide a file."
+	    exit 1
+	  fi
+
+	  # Count and sort words by frequency
+	  cat "$1" | tr ' ' '\n' | sort | uniq -c | sort -nr
+
+Explanation of Commands and Options:
+
+    cat "$1"
+        What it does: Reads the contents of the file specified by the user ($1 is the first argument passed to the script, which is the filename you specified in the command line).
+        Why it's used: It’s used to get the contents of the file and display it in the terminal for processing.
+
+    tr ' ' '\n'
+        What it does: The tr command replaces spaces (' ') with newlines ('\n').
+        Why it's used: This converts the file contents into a list of words, one per line, which makes it easier to process each word individually.
+
+    sort
+        What it does: The sort command sorts lines of text in alphabetical order.
+        Why it's used: Sorting the words ensures that identical words are grouped together. This is important because the uniq command only works on consecutive identical lines.
+
+    uniq -c
+        What it does: The uniq command filters out repeated lines. When used with the -c option, it counts how many times each word (line) appears.
+        Why it's used: After sorting the words, uniq -c counts the occurrences of each word and outputs the word along with its count.
+
+    sort -nr
+        What it does: This command sorts the output in numerical order (-n) and reverses the order (-r) to display the most frequent words first.
+        Why it's used: We want the most frequent words to appear at the top, so sort -nr orders the word counts in descending order.
+
+    tr '[:upper:]' '[:lower:]'
+        What it does: This command converts all uppercase letters to lowercase.
+        Why it's used: It makes the word count case-insensitive, meaning "Hello" and "hello" will be treated as the same word.
+
+    tr -s ' '
+        What it does: The -s option "squeezes" consecutive spaces into a single space.
+        Why it's used: It helps remove extra spaces between words, ensuring a consistent format for word separation.

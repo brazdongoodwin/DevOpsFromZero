@@ -1,0 +1,105 @@
+Challenge: Creating A Name Sorting Shell Script
+
+Objective:
+
+Write and debug a shell script that:
+
+    Reads a list of names from a file.
+    Sorts the names alphabetically.
+    Outputs the sorted list to a new file.
+
+1. Writing the Shell Script
+	Step 1: Create a File
+
+    	  Open your terminal and create the script file:
+
+	  touch sort_names.sh
+
+	  Open it in a text editor like vim:
+
+    	  vim sort_names.sh
+
+	Step 2: Write the Script
+
+	  Add the following lines to your file:
+
+	  #!/bin/bash
+
+	  # Check if the input file is provided
+	  if [ -z "$1" ]; then
+    	    echo "Error: No input file provided."
+    	    echo "Usage: ./sort_names.sh input_file"
+    	    exit 1
+	  fi
+
+	  # Check if the input file exists
+	  if [ ! -f "$1" ]; then
+    	    echo "Error: File '$1' does not exist."
+    	    exit 1
+	  fi
+
+	  # Sort the names and save them to sorted_names.txt
+	  sort "$1" > sorted_names.txt
+	  echo "Names have been sorted and saved to sorted_names.txt."
+
+2. Debugging the Script
+	Step 1: Make the Script Executable
+
+	  Run:
+
+	  chmod +x sort_names.sh
+
+	Step 2: Test the Script
+
+    	  Create a sample file with unsorted names:
+
+	  echo -e "Charlie\nAlice\nBob" > names.txt
+
+	  Run the script with the file as an argument:
+
+    	  ./sort_names.sh names.txt
+
+3. Troubleshooting Common Errors
+    Issue 1: "Permission Denied"
+
+    	Cause: The script is not executable.
+    	
+	Fix: 
+	Run:
+    	chmod +x sort_names.sh
+
+    Issue 2: "No Input File Provided"
+
+    	Cause: You ran the script without providing a file.
+    	
+	Fix: 
+	Provide the file as an argument:
+    	./sort_names.sh names.txt
+
+    Issue 3: "File Does Not Exist"
+
+    	Cause: The input file doesn't exist or you provided the wrong path.
+    	
+	Fix: 
+	Double-check the file name and its path.
+
+    Issue 4: Output Is Empty
+
+    	Cause: The input file may be empty.
+    	
+	Fix: Open the input file to check its contents:
+    	cat names.txt
+
+4. Expanding the Script (Optional)
+
+	Add enhancements for better usability:
+
+    	Allow the user to specify the output file name:
+
+	output_file="sorted_${1}"
+	sort "$1" > "$output_file"
+	echo "Names have been sorted and saved to $output_file."
+
+	Handle spaces in names by adding double quotes:
+
+	echo "John Doe" >> names.txt
